@@ -1,0 +1,123 @@
+DATE: 16092016
+
+- Add Foreign key "Agent" to "FabricInformation" table
+- Delete "IsChori" field in "FabricSupplier" table
+- Add "PAYMENTSTATUS" field in "ORDEREXTERNALACCESSORY" table
+- Change all "PRICE" data type to "float(20,3)"
+     UNITPRICEPERUNIT in ACCESSORYPRICE
+     UNITPRICE in FABRICINFORMATIONDETAIL
+     REFERPRICE in GARMENTSTYLE
+     PRICE in ORDERINTERNALACCESSORYDETAIL
+- Add new Table "PiAssignInternalAccessoriesOfOrders"
+
+----------------------------------------------------------
+
+DATE: 24092016
+
+- Add "AGENTCONTACT" table and its relationship
+- Add "FACTORYACCOUNTINFO" table
+- Add "CUSTOMERACCOUNTINFO" table
+
+----------------------------------------------------------
+
+DATE: 27092016
+
+- Add "BRAND" table
+- Add "Remark" field to "ACCESSORYPRICE","CUSTOMER",
+"FABRICSUPPLIER","FACTORY","ACCESSORYSUPPLIER", "SHIPPINGLINE" table
+- Add "Tel" field to "CUSTOMERCONTACT","FABRICSUPPLIERCONTACT",
+"FACTORYCONTACT","ACCESSORYSUPPLIERCONTACT", "SHIPPINGLINECONTACT" table
+- Add "ImgURL3,4" field to "ACCESSORYINFORMATION" table
+- Add "AccSupplierCode" field to "ACCESSORYINFO" table
+- Add "SewingGuide,PackingGuide"field to "GARMENTSTYLE" table
+- Add "CCMAIL" table
+- Add "Voucher Received Date, Voucher Sent Date" to "FABRICINFORMATIONTABLE"
+- Add "InvoiceNumber" to "ORDERINTERNALACCESSORIES"
+- "PI" table
+      Rename CUSTOMER2CODE -> CONSIGNEE, MANUFACTUREGUIDEURL -> SEWINGGUIDEURL
+      Add "BrandCode" field
+      Add "SHIPMENTSTATUS" field
+- Add "CCMailString" field to "LOGOFCHANGE"
+- Add "AssignQtyPercent" field to "PIASSIGNFABRICDETAIL"
+- Add "SHIPMENTSTATUS" field in "FPI" table
+
+----------------------------------------------------------
+
+DATE: 04102016
+
+- Add "GARMENTSTYLEACCESSORYDETAILCODE" to PIASSIGNEXTERNALACCESSORY table (foreignkey GARMENTSTYLEACCESSORYDETAIL)
+- Edit `CCMAILSTRING` string -> tinyint to USER table
+- `PRICE` float(20,3) DEFAULT NULL to "ORDERINTERNALDETAIL" & "ORDEREXTERNAL" table
+- Edit `CREATEDATE` datetime DEFAULT DATETIME DEFAULT CURRENT_TIMESTAMP
+
+----------------------------------------------------------
+
+DATE: 08102016
+
+- Add "UnitPrice" field for ORDERINTERNALACCESSORIES
+
+----------------------------------------------------------
+
+DATE: 14102016
+
+- Add "SizeCode" field for PIASSIGNINTERNALACCESSORIESDETAIL
+----------------------------------------------------------
+
+DATE: 15102016
+
+- Add "CURRENCYCODE" field for "GARMENTSTYLE"
+
+----------------------------------------------------------
+
+DATE: 26102016
+
+- Rename "ACTUALQTY" to "ACTUALASSIGNQTY" field for "PIASSIGNEXTERNALACCESSORIES"
+- Add UNITPRICE to "PIASSIGNEXTERNALACCESSORIES" & "ORDEREXTERNALACCESSORIES"
+
+----------------------------------------------------------
+
+DATE: 27102016
+- Add STOCKASSIGNQTY to "PIASSIGNEXTERNALACCESSORIES" 
+
+
+----------------------------------------------------------
+
+DATE: 07112016
+- Add 10 ATTACHEDFILEURL (1-10) to "LOGOFCHANGE" table
+- Add PACKINGGUIDE to "PI" table
+
+----------------------------------------------------------
+
+DATE: 26112016
+- Add Barcode field to PIGRIDDETAIL
+
+DATE: 28112016
+- Add "Email" field to "accessorysupplier" table
+
+----------------------------------------------------------
+
+DATE: 08122016
+- Add GARMENTSTYLEREFPRICE table
+- Add UNITREFERPRICE at GARMENTSTYLE table
+- Change float(20,3) -> float(20,4) 
+- Expand varchar(20) for some fields (code, description...)
+
+
+----------------------------------------------------------
+
+DATE: 08122016
+- Change AMOUNT field  float -> double at CURRENCYEXCHANGE table (must change entity, model, service at sourcecode)
+- Change PRICE field float -> double at ORDERINTERNALACCESSORIESDETAIL table (must change entity, model, service at sourcecode)
+- Add SHIPPINGSTATUS on ORDERINTERNALACCESSORIES table
+
+----------------------------------------------------------
+
+DATE: 20122016
+- Change datetime to date:
+       PIRECEIVEDDATE, PIESTSHIPDATE, MFGSTARTEDDATE, MFGFINISHEDDATE on PI table
+       FROMDATE,TODATE in ACCESSORYPRICE table
+       ORDERDATE, ESTIMATEDELVDATE, ACTUALDELVDATE in orderinternalaccessory table
+-Change PRICE, UNITPRICE from int,float to double(20,4)  in orderinternalaccessory ,detail
+-Change ORDERASSIGNQUANTITY from int to double in piassigninternalaccessoriesoforders
+-Change ASSIGNQUANTITYfrom int to double in piassigninternalaccessoriesdetail
+- Add SHIPPINGSTATUS to ORDERINTERNALACCESSORY table

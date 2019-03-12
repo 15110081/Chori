@@ -1,0 +1,18 @@
+package com.chori.service;
+
+import com.chori.AbstractService;
+import com.chori.entity.Piassigninternalaccessoriesoforders;
+import com.chori.model.PiAssignInternalAccessories_OrderChoseModel;
+
+public interface PiassigninternalaccessoriesofordersService extends
+			AbstractService<Piassigninternalaccessoriesoforders, Integer>{
+	Integer findIDByOrderSheetNoAndPiInternalAccessories(String orderSheetNo, Integer piInternalAccessories);
+	Boolean isExistedByOrderSheetNoAndPiInternalAccessories(String orderSheetNo, Integer piInternalAccessories);
+	boolean addPiAssignInternalAccessoriesOfOrders(PiAssignInternalAccessories_OrderChoseModel piAssignInternalAccessories_OrderChoseModel);
+	boolean editPiAssignInternalAccessoriesOfOrders(PiAssignInternalAccessories_OrderChoseModel piAssignInternalAccessories_OrderChoseModel);
+	boolean deletePiAssignInternalAccessoriesByModel(PiAssignInternalAccessories_OrderChoseModel piAssignInternalAccessories_OrderChoseModel);
+	Integer findPiAssignInternalAccessoriesIdByAccessoryCodeAndLotNumber2(
+			String lotnumber, String accessorycode);
+	boolean savePiAssignInternalAccessoriesOfOrders(PiAssignInternalAccessories_OrderChoseModel piAssignInternalAccessories_OrderChoseModel);
+	Double getSumOfAssignedQuantity(String lotNumber, String accessoryCode);
+}

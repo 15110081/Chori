@@ -1,0 +1,40 @@
+$(document).ready(function() {
+	var pathname = window.location.pathname;
+	var location = window.location;
+	var title;
+    switch (location.toString()) {
+    case getAbsolutePath() +"": title = "Home"; break;   
+    case getAbsolutePath() +"listCustomer": title = "Customer"; break;
+    case getAbsolutePath() +"listaccessorysupplier": title = "Accessory Supplier"; break;
+    case getAbsolutePath() +"listFactory": title = "Factory"; break;
+    case getAbsolutePath() +"listFabricSupplier": title = "Fabric Supplier"; break;
+    case getAbsolutePath() +"Shippingline": title = "Shipping Line"; break;
+    case getAbsolutePath() +"listctnrtype": title = "CTNR Type"; break;
+    case getAbsolutePath() +"listdestination": title = "Destination"; break;
+    case getAbsolutePath() +"Size": title = "Size"; break;
+    case getAbsolutePath() +"listgarmentkind": title = "Garment Kind"; break;
+    case getAbsolutePath() +"listGarmentstyle": title = "Garment Style"; break;
+    case getAbsolutePath() +"GarmentConsumption": title = "Garment Consumption"; break;
+    case getAbsolutePath() +"listAccessory": title = "Accessory"; break;
+    case getAbsolutePath() +"listWastedPercentage": title = "Wasted Percentage"; break;
+    case getAbsolutePath() +"listAccessoryPrice": title = "Accessory Price"; break;
+    case getAbsolutePath() +"listAccessoryGroup": title = "Accessory Group"; break;
+    case getAbsolutePath() +"listcolor": title = "Color"; break;
+    case getAbsolutePath() +"listunit": title = "Unit"; break;
+    case getAbsolutePath() +"listSizeGroup": title = "Size Group"; break;
+    case getAbsolutePath() +"listwidth": title = "Width"; break;
+    case getAbsolutePath() +"listCurrency": title = "Currency"; break;
+    case getAbsolutePath() +"listCurrencyexchange": title = "Currency Exchange"; break;
+    case getAbsolutePath() +"listEstimatetime": title = "Estimate Time"; break;
+    case getAbsolutePath() +"listUser": title = "User Management"; break;
+    case getAbsolutePath() +"listRole": title = "Role & Function"; break;
+    case getAbsolutePath() +"listSignature": title = "Signature"; break;
+    case getAbsolutePath() +"login": title = "Log In"; break;
+    case getAbsolutePath() +"Office": title = "Chori Office"; break;
+    case getAbsolutePath() +"listpackingguide": title = "Packing Guide"; break;
+    case getAbsolutePath() +"listFabricinformation": title = "Fabric Information"; break;
+    case getAbsolutePath() +"listorderinternalaccessory": title = "Order General Accessories"; break;
+    default: title="Chori";
+    } 
+	document.title = title;   
+});

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<qc_crane CODE="QC1"	NAME="QC 1"	/>
+	<qc_crane CODE="QC2"	NAME="QC 2"	/>
+</dataset>

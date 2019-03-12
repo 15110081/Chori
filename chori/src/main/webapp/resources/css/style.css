@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  .margin-bottom {
+    margin-bottom: 5px;
+  }
+  .top-banner {
+    padding: 20px calc(50% - 500px);
+  }
+}
+
+@media (max-width: 349px) {
+  .action-button {
+    width: 100%;
+  }
+}
+
+.action-button-group {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.action-button {
+  margin-bottom: 5px;
+}
